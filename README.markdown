@@ -5,7 +5,7 @@ The Maps API limits URL requests to 2048 characters. This library does not enfor
 
 ## Examples
 
-An [example map](http://maps.googleapis.com/maps/api/staticmap?size=400x400&sensor=false&path=weight:3|color:blue|enc:{hjxEikzcTpl@~B_Slg@_BbDgw@uV~CbIky@ph@gMh^hL|Zue@rK~o@wE_z@zQpW{ZoGxNGrSml@t_@bBeg@sh@{Qma@it@qK_^hXzj@z`@tLzCpo@x[uWtJ`Fba@mt@lCic@vCmIaXnCpJaf@~FtGc_@zS~Cpd@b|@m[xAba@wPuVyWhj@uSdK~W|HoNiXho@vO~Da`@u|@vg@eD~|@{Lbh@`PiD{b@ou@dr@ox@bDye@u{@lGyv@y[kLvS~XlH}Djq@kl@zWbTzv@lFqEal@`t@my@lh@cSq]af@gu@gw@fDai@gv@eg@jYwLyEyZlz@wn@aM{IwHbRa_@_TpKhs@nc@br@bIj\nx@ps@}[fz@|v@wHn]m}@sz@tVzUzZqWg^bx@tw@{Rh{@e}@`{@dBvWpMha@hEft@|KyLkd@ro@vy@wMdu@sYse@tEoSoK~i@cWSlQcZar@rJiJsVdOxRoGfUwI}H{RwQ) from a 100-point random walk, encoded using the library.
+An [example map](http://maps.googleapis.com/maps/api/staticmap?size=400x400&sensor=false&path=weight:3|color:blue|enc:~fzz]_uvsOdX`a@jR~Boe@_XfPZoe@N{N}p@jTqIxCpYvi@?yApz@{r@}HkQ|l@xi@pa@vB{IiHg`@ao@jWxA_Bi_@gN_S|[zN}s@vy@mQ|c@bd@TyHti@x]ca@vZ~Di}@mb@`\hPxe@hRky@~Rk`@nq@_p@t_@mUdw@oHaWc@dNus@kVz[gu@oi@ne@}Yxg@mu@iCo}@mm@gQhMgWtc@}Kxv@x_@gSlWq|@vT{v@q{@_m@jL_Td]) from a 100-point random walk, encoded using the library.
 
 Using the library:
 
