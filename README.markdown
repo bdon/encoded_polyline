@@ -38,7 +38,12 @@ Included is a benchmark that creates a 100-point random walk, gives you a URL, a
     encoding              9.090000   0.000000   9.090000 (  9.092519)
     decoding             16.470000   0.010000  16.480000 ( 16.473547)
 
-## Known Issues
+## Contributors
 
-Haven't tested with Ruby 1.9; probably doesn't work.
+[bdon](https://github.com/bdon) - author
 
+[anoved](https://github.com/anoved) - explicit precision, MapQuest support
+
+## Copyright
+
+Copyright (c) 2013 Brandon Liu. See LICENSE for details.
