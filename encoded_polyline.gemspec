@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.version = EncodedPolyline::VERSION
   s.authors = ["Brandon Liu"]
   s.email = "bdon@bdon.org"
-  s.date = "2011-09-02"
-  s.description = "Encode an array of coordinates for the Google Static Maps API."
+  s.date = "2013-02-20"
+  s.description = "Encode an array of coordinates for the Google Static Maps and MapQuest APIs."
   s.summary = "Encode an array of coordinates"
   s.homepage = "http://github.com/bdon/encoded_polyline"
 
