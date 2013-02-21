@@ -22,7 +22,7 @@ Using the library with explicit decimal precisions:
     EncodedPolyline.encode(-179.9832104, 7)               # "na`|gjB"
     EncodedPolyline.decode("na`|gjB", 7)                  # -179.9832104
     EncodedPolyline.encode_points([[37.782,-122.406]], 2) # "ckF`|V"
-    EncodedPolyline.decode_points("ohreFnlbjV", 2)        # [[37.78, -122.41]]
+    EncodedPolyline.decode_points("ckF`|V", 2)            # [[37.78, -122.41]]
 
 It is important to specify the same precision when encoding and decoding. Otherwise, decoded coordinates may be wrong by orders of magnitude.
 

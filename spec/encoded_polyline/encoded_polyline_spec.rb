@@ -5,6 +5,10 @@ describe EncodedPolyline, ".encode" do
     EncodedPolyline.encode(-179.9832104).should == "`~oia@"
   end
 
+  it "encodes a single point with explicit precision" do
+    EncodedPolyline.encode(-179.9832104, 7).should == "na`|gjB"
+  end
+
   it "encodes a very slightly negative point" do
     # Due to precision errors, verify that a negative value that rounds to 0 works.
     EncodedPolyline.encode(-3e-6).should == "?"
@@ -13,7 +17,11 @@ end
 
 describe EncodedPolyline, ".decode" do
   it "decodes a single point" do
-    EncodedPolyline.decode('`~oia@').should be_within(0.0001).of(-179.9832104)
+    EncodedPolyline.decode('`~oia@').should be_within(0.00001).of(-179.9832104)
+  end
+
+  it "decodes a single point with explicit precision" do
+    EncodedPolyline.decode("na`|gjB", 7).should be_within(0.0000001).of(-179.9832104)
   end
 end
 
@@ -33,8 +41,16 @@ describe EncodedPolyline, ".decode_points" do
     EncodedPolyline.encode_points([[37.782,-122.406]]).should == "ohreFnlbjV"
   end
 
+  it "encodes a a pair of points with explicit precision" do
+    EncodedPolyline.encode_points([[37.782,-122.406]], 2).should == "ckF`|V"
+  end
+
   it "should decode" do
     should_be_similar_points(EncodedPolyline.decode_points(ring_text), ring_points)
+  end
+
+  it "decodes points with explicit precision" do
+    should_be_similar_points(EncodedPolyline.decode_points("ckF`|V", 2),[[37.78, -122.41]])
   end
 
   it "encodes points with little variation" do
