@@ -14,9 +14,9 @@ class EncodedPolyline
   def self.decode_arr(arr, precision=5)
     num = 0
     arr[0..-2].each_with_index do |elem, i|
-      num = (num | (((elem[0] - 63) ^ 0x20) << (i * 5)))
+      num = (num | (((elem[0].ord - 63) ^ 0x20) << (i * 5)))
     end
-    num = (num | ((arr.last[0] - 63) << ((arr.size-1) * 5)))
+    num = (num | ((arr.last[0].ord - 63) << ((arr.size-1) * 5)))
     num = ~num if ((num & 0x1) == 1)
     num = num >> 1
     num = num.to_f * (10 ** -precision)
@@ -47,7 +47,7 @@ class EncodedPolyline
 
     str.each_char do |char|
       point_chars << char
-      if ((char[0] - 63) & 0x20).zero?
+      if ((char[0].ord - 63) & 0x20).zero?
         decoded_points << decode_arr(point_chars, precision)
         point_chars = []
       end

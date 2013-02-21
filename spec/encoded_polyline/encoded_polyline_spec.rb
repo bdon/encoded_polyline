@@ -13,14 +13,14 @@ end
 
 describe EncodedPolyline, ".decode" do
   it "decodes a single point" do
-    EncodedPolyline.decode('`~oia@').should be_close(-179.9832104, 0.0001)
+    EncodedPolyline.decode('`~oia@').should be_within(0.0001).of(-179.9832104)
   end
 end
 
 def should_be_similar_points(arr1, arr2)
   arr1.each_with_index do |(x,y),i|
-    x.should be_close(arr2[i][0], 0.0001)
-    y.should be_close(arr2[i][1], 0.0001)
+    x.should be_within(0.0001).of(arr2[i][0])
+    y.should be_within(0.0001).of(arr2[i][1])
   end
 end
 
